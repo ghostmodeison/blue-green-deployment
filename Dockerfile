@@ -18,7 +18,7 @@ ADD . /app
 RUN npm install
 
 # Build the app
-RUN npm run build
+#RUN npm run build
 
 # Final stage
 FROM 957779811736.dkr.ecr.ap-south-1.amazonaws.com/node:latest

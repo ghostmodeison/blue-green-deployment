@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Test-CICD-Task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:957779811736:task-definition/Blue-Green-Task:1",
     "containerDefinitions": [
         {
-            "name": "Test-CICD-Container",
-            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/test-cicd:v1.2",
+            "name": "Blue-Green-Container",
+            "image": "957779811736.dkr.ecr.ap-south-1.amazonaws.com/blue-green:v1.7",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "port-test",
+                    "name": "port",
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/Test-CICD-Task",
+                    "awslogs-group": "/ecs/Blue-Green-Task",
                     "awslogs-create-group": "true",
                     "awslogs-region": "ap-south-1",
                     "awslogs-stream-prefix": "ecs"
@@ -33,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "Test-CICD-Task",
+    "family": "Blue-Green-Task",
     "taskRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::957779811736:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
@@ -83,13 +83,13 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-07-25T18:26:04.494Z",
+    "registeredAt": "2025-07-26T16:55:10.128Z",
     "registeredBy": "arn:aws:iam::957779811736:root",
     "enableFaultInjection": false,
     "tags": [
         {
             "key": "Name",
-            "value": "Test-CICD-Task"
+            "value": "Blue-Green-Task"
         }
     ]
 }

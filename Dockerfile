@@ -2,8 +2,8 @@ ARG BASE_IMAGE=957779811736.dkr.ecr.ap-south-1.amazonaws.com/node:latest
 FROM ${BASE_IMAGE} As build
 
 LABEL Marketplace-frontend-apisversion="1.0.0.1" \
-      contact="Compliance Kart" \
-      description="A minimal Node.js Docker image for marketplace-frontend application in Staging" \
+      contact="Chandan" \
+      description="A minimal Node.js Docker image for chandan in Staging" \
       base.image="Node" \
       maintainer="hello@gmail.com"
 
@@ -29,10 +29,6 @@ COPY --from=build /app .
 USER node
 
 EXPOSE 3000
-
-# Health check
-#HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
- # CMD curl --fail http://staging.marketplace.envr.earth/health || exit 1
 
 # Start the app
 CMD ["npm", "start"]

@@ -4,12 +4,12 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send(`
-        <div style="background-color:brown; color:white; height:100vh; display:flex; justify-content:center; align-items:center; font-size:40px;">
-            White Deployment hello chandan bhaifdsnfkdhnfoihfoil
+        <div style="background-color:yello; color:white; height:100vh; display:flex; justify-content:center; align-items:center; font-size:40px;">
+            Yello
         </div>
     `);
 });
 
 app.listen(port, () => {
-    console.log(`white deployment server running on port ${port}`);
+    console.log(`yellow deployment server running on port ${port}`);
 });
